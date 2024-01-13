@@ -1,4 +1,17 @@
-img{
-    width: 80px;
-    height: 80px;
+.headline{
+    background: url(https://kettleheroes.com/wp-content/uploads/2022/02/Why-is-Popcorn-a-Movie-Food.jpg) no-repeat center center; 
+    background-size: cover;
+    height: 200px;
+    text-align: center; 
 }
+img{
+    width: 120px;
+    height: 120px;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+
