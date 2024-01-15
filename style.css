@@ -1,18 +1,94 @@
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url('./Assets/cinema.JPG');
+    background-size: cover; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    align-items: center;
+    justify-content: center;
+    color : white;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    
+}
+
 .headline{
-    background: url(https://kettleheroes.com/wp-content/uploads/2022/02/Why-is-Popcorn-a-Movie-Food.jpg) no-repeat center center; 
+    background: url(https://kettleheroes.com/wp-content/uploads/2022/02/Why-is-Popcorn-a-Movie-Food.jpg) center center; 
     background-size: cover;
-    height: 200px;
     text-align: center; 
+    height: 50vh;
+    width: 100%;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}   
+
+.header{
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    color: black;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1);
 }
 img{
     width: 120px;
     height: 120px;
 }
-h1{
-    text-align: center;
-}
-h2{
-    text-align: center;
+
+.movie-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    width: 80%;
+    margin: auto;
 }
 
+.movie-card{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.5s, opacity 0.5s;
+}
+/* define the movie-card to be hoverable */
+.movie-card:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    opacity: 0.5;
+}
 
+.movie-card img{
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video{
+    margin-top: 200px;
+}
+
+@media screen and (max-width: 600px) {
+    .movies-cards {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
