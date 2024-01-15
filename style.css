@@ -42,8 +42,8 @@ img{
 
 .movie-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 40px;
     justify-items: center;
     align-items: center;
     align-content: center;
@@ -84,11 +84,11 @@ img{
 }
 
 .video{
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 @media screen and (max-width: 600px) {
-    .movies-cards {
+    .movie-cards {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
 }
