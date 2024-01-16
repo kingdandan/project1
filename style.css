@@ -2,8 +2,9 @@ body {
     display: flex;
     flex-direction: column;
     overflow: visible;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url('./Assets/cinema.JPG');
-    background-size: cover; 
+    background: url('./Assets/cinema.JPG');
+    background-blend-mode: darken;
+    background-size: contain; 
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
@@ -12,7 +13,7 @@ body {
     color : white;
     text-align: center;
     text-shadow: 0 0 20px rgba(255, 255, 255, 1);
-    
+    width: 100%;
 }
 
 .headline{
@@ -77,17 +78,21 @@ img{
     height: 100%;
 }
 
-.nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
 .about{
     margin-top: 100px;
+}
+
+table {
+    width: 50%;
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .form input , select {
     padding: 10px;
@@ -101,7 +106,18 @@ img{
     background-color: #aeacac;
 }
 
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
 @media screen and (max-width: 600px) {
+    .headline{
+        height: 30vh;
+    }
     .movie-cards {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
@@ -114,5 +130,15 @@ img{
     }
     .about{
         margin-top: 50px;
+    }
+    body {
+        background: url('./Assets/cinema.JPG'), url('./Assets/second-image.jpg');
+        background-size: contain, cover;
+        background-repeat: no-repeat, repeat-y;
+        background-position: top, bottom;
+    }
+    table{
+        font-size: 12px;
+        width: 80%;
     }
 }
