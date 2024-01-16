@@ -3,43 +3,68 @@ h1{
     color: white;
 }
 body {
-    background-image: url('https://wallpaperbat.com/img/11131-cinema-hd-wallpaper-top-free-cinema-hd-background.jpg');
-    background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
-    background-position: center center;  
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(' https://wallpaperbat.com/img/11131-cinema-hd-wallpaper-top-free-cinema-hd-background.jpg');
+  background-size: cover; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  align-items: center;
+  justify-content: center;
+  color : white;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 1);
   }
-  img{
-    width: 100px;
-    height: 150px;
-  }
-  * {
-    box-sizing: border-box;
-  }
-  .column {
-    float: left;
-    width: 15%;
-    padding: 50px;
-  }
-  
-  /* Clearfix (clear floats) */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+ 
+ 
+  .movie-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 40px;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    width: 80%;
+    margin: auto;
+}
+/* define the movie-card to be hoverable */
+.movie-card:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+  opacity: 0.5;
+}
+.movie-card img{
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+  height: 150px;
+  width: 100px;
+}
   h2{
     color: red;
     font-size: 15px;
   }
   
-  .movie-card:hover{
-    transform: scale(1.1);
-    transition: 0.5s;
-    opacity: 0.5;
-
-  }
+  .movie-card{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.5s, opacity 0.5s;
+}
+  
   @media screen and (max-width: 600px) {
     .movie-cards {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
+}
+h3{
+  text-align: center;
+    color: white;
+    font-size: 30px;
 }
