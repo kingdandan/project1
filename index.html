@@ -37,10 +37,31 @@
             <h3>Comedy</h3>
         </a>
     </div>
+    <h2 class="about">About us:</h2>
     <iframe class="video" width="560" height="315"
         src="https://www.youtube.com/embed/wG0OwA66KUA" 
         frameborder="0" allowfullscreen>
     </iframe>
+    <h2 class="about">Register to our newsletter:</h2>
+    <form class = "form" action ="submit.html" >
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" ><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" ><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email" required ><br><br>
+        <label for="interestList">Choose your interests:</label><br>
+        <select id="interestList" name="interestList">
+            <option value="Action">Action</option>
+            <option value="Drama">Drama</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Comedy">Comedy</option>
+        </select><br><br>
+        <input type="submit" value="Submit">
+        <input type="reset">
+    </form>
+
     <ul class="nav">
         <li><a href="Action.html">Action movies</a></li>
         <li><a href="Drama.html">Drama movies</a></li>
